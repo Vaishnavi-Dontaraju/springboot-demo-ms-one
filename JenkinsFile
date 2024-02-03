@@ -1,6 +1,9 @@
 @Library('Library')_
 
+pipeline {
+
  stage('Test') {
      MavenBuild()
 
- }
+}
+}
