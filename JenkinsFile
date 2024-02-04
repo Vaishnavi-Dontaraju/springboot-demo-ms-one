@@ -1,4 +1,4 @@
-@Library('Library')_
+@Library('demo-shared-lib@feature/jenkinslib')_
 
 pipeline {
 
