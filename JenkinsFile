@@ -1,7 +1,13 @@
 @Library('demo-shared-lib@feature/jenkinslib') _
 
-def methods = MavenBuild.inspect()
-echo "Methods: ${methods}"
+def listMethods(library) {
+    def methods = library.class.methods
+    methods.each { method -> 
+        echo "Method name: ${method.name}"
+    }
+}
+
+listMethods(MavenBuild)
 /*pipeline {
     agent any
 
