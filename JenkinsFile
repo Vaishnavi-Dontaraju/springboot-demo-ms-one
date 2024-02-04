@@ -1,9 +1,14 @@
 @Library('demo-shared-lib@feature/jenkinslib')_
 
 pipeline {
+    agent any
 
- stage('Test') {
-     MavenBuild()
+    stages {
+        stage('Test') {
+            MavenBuild()
+        }
 
-}
+    }
+
+ 
 }
