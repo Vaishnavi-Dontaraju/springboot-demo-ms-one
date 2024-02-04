@@ -1,3 +1,18 @@
 @Library('demo-shared-lib@feature/jenkinslib') _
+pipeline {
+    // Ensure that 'agent any' is specified correctly
+    agent any
 
-MavenBuild()
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    echo 'Building...'
+                    MavenBuild()
+                    // Your build steps here
+                }
+            }
+        }
+    }
+}
+
