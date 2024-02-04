@@ -8,7 +8,8 @@ pipeline {
             steps {
                 script {
                     echo 'Building...'
-                    MavenBuild()
+                    SpringbootCIPipeline()
+                    //MavenBuild()
                     // Your build steps here
                 }
             }
