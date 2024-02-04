@@ -4,7 +4,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Example') {
+        stage('Maven Build') {
             steps {
                 script {
                     MavenBuild()
