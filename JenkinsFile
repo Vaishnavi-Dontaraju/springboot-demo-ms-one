@@ -1,19 +1,3 @@
 @Library('demo-shared-lib@feature/jenkinslib') _
-// pipeline {
-//     // Ensure that 'agent any' is specified correctly
-//     agent any
 
-//     stages {
-//         stage('Build') {
-//             steps {
-//                 script {
-//                     echo 'Building...'
-//                     SpringbootCIPipeline()
-//                     //MavenBuild()
-//                     // Your build steps here
-//                 }
-//             }
-//         }
-//     }
-// }
 SpringbootCIPipeline()
