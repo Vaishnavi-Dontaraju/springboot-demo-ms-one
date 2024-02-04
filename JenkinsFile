@@ -1,14 +1,14 @@
-@Library('demo-shared-lib@feature/jenkinslib') _
+@Library('demo-shared-lib') _
 
-pipeline {
+MavenBuild()
+/*pipeline {
     agent any
 
     stages {
         stage('Test') {
             steps{
                 script{
-                      MavenBuild()
-
+                    MavenBuild()
                 }
               
                     
@@ -20,3 +20,4 @@ pipeline {
 
  
 }
+*/
