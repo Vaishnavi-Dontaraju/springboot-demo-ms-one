@@ -1,25 +1,23 @@
 @Library('demo-shared-lib@feature/jenkinslib') _
 
-MavenBuild.test()
-MavenBuild()
-
-/*pipeline {
+pipeline {
     agent any
 
     stages {
-        stage('Test') {
-            steps{
-                script{
-                    MavenBuild()
-                }
-              
+        stage('Example') {
+            steps {
+                script {
+                    // Invoke the shared method to run a bash command
+                    def result = mySharedLibrary.runShellCommand('echo "Hello, Shared Library!"')
                     
+                    // Check the result
+                    if (result == 0) {
+                        echo 'Command executed successfully'
+                    } else {
+                        error 'Command failed'
+                    }
+                }
             }
-            
         }
-
     }
-
- 
 }
-*/
